@@ -116,7 +116,7 @@ public class MainComposite extends Composite {
             }
         };
 
-        calculateButton.addSelectionListener(isCOTFListener);
+        calculateButton.addSelectionListener(calculateButtonListener);
         isCOTF.addSelectionListener(isCOTFListener);
 
         mathSign.addModifyListener(inputModifyListener);

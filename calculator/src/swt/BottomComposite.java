@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Text;
 
 public class BottomComposite extends Composite {
 
-    private static final String ZERO_VALUE = "0";
+    public static final String ZERO_VALUE = "0";
 
     private Text result;
 
