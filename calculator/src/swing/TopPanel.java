@@ -9,16 +9,10 @@ import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import org.eclipse.swt.widgets.Combo;
-import org.eclipse.swt.widgets.Text;
-
 import calculator.MathSignEnum;
 
 public class TopPanel extends JPanel {
 
-    /**
-     * 
-     */
     private static final long serialVersionUID = 1L;
 
     JTextField firstNumber, secondNumber;
@@ -90,7 +84,7 @@ public class TopPanel extends JPanel {
             return false;
         }
     }
-    
+
     public JTextField getFirstNumber() {
         return firstNumber;
     }
@@ -102,5 +96,4 @@ public class TopPanel extends JPanel {
     public JTextField getSecondNumber() {
         return secondNumber;
     }
-
 }

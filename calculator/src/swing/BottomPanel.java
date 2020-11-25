@@ -7,17 +7,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-
-public class BottomPanel extends JPanel{
+public class BottomPanel extends JPanel {
 
     public static final String ZERO_VALUE = "0";
 
     private static final long serialVersionUID = 1L;
-    
-    
-  private JLabel simpleLabel;
-  private JTextArea result;
-   
+
+    private final JLabel simpleLabel;
+    private final JTextArea result;
 
     public BottomPanel() {
         GridBagConstraints gbc = new GridBagConstraints();
@@ -30,13 +27,12 @@ public class BottomPanel extends JPanel{
         result = new JTextArea();
         result.setEnabled(false);
         result.setText(ZERO_VALUE);
-        
+
         add(simpleLabel);
-        add(result,gbc);
-        
-        
+        add(result, gbc);
+
     }
-    
+
     public JTextArea getResult() {
         return result;
     }
