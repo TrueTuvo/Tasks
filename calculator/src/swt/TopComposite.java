@@ -18,8 +18,6 @@ public class TopComposite extends Composite {
     private final Combo mathSign;
     private final Text secondNumber;
 
-
-
     public TopComposite(Composite parent, int style) {
         super(parent, style);
 
@@ -58,6 +56,9 @@ public class TopComposite extends Composite {
                     }
                 } else if (e.keyCode != SWT.BS && e.keyCode != Calculators.CHAR_VALUE_SUBSTRACTION) {
                     newS = oldS.substring(0, e.start) + e.text + oldS.substring(e.end);
+                }
+                if (newS.matches("(([a-z]+\\d+)|(\\d+[a-z]+))[a-z\\d]*")) {
+                    e.doit = false;
                 }
 
                 try {

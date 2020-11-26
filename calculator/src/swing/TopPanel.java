@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import javax.swing.ComboBoxEditor;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -71,6 +72,9 @@ public class TopPanel extends JPanel {
     }
 
     private boolean isCorect(String text) {
+        if (text.matches("(([a-z]+\\d+)|(\\d+[a-z]+))[a-z\\d]*")) {
+            return false;
+        }
         if (text.equals(Calculators.STRING_VALUE_DOT) || text.equals(Calculators.STRING_VALUE_SUBSTRACTION) || text.equals(Calculators.EMPTY_STRING)) {
             return true;
         }
