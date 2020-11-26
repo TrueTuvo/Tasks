@@ -23,9 +23,6 @@ import calculator.MathSignEnum;
 
 public class MainComposite extends Composite {
 
-    public static final String MATH_EXCEPTION_MESSAGE = "Arithmetic Error";
-    private static final String ZERO_VALUE = "0";
-
     private final Text firstNumber;
     private final Combo mathSign;
     private final Text secondNumber;
@@ -157,8 +154,8 @@ public class MainComposite extends Composite {
             firstValue = new BigDecimal(firstNumber.getText());
             secondValue = new BigDecimal(secondNumber.getText());
         } catch (Exception e2) {
-            firstValue = new BigDecimal(ZERO_VALUE);
-            secondValue = new BigDecimal(ZERO_VALUE);
+            firstValue = new BigDecimal(Calculators.ZERO_VALUE);
+            secondValue = new BigDecimal(Calculators.ZERO_VALUE);
         }
         if (Calculators.isValidate(firstValue.toString(), secondValue.toString(), currentOperation)) {
             finalResult = Calculators.calculate(firstValue, secondValue, currentOperation);
@@ -167,7 +164,7 @@ public class MainComposite extends Composite {
             result.setText(finalResult.toString());
             resultsLog.add(calculatedLineString);
         } else {
-            result.setText(MATH_EXCEPTION_MESSAGE);
+            result.setText(Calculators.MATH_EXCEPTION_MESSAGE);
         }
     }
 

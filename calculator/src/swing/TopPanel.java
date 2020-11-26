@@ -9,19 +9,16 @@ import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import calculator.Calculators;
 import calculator.MathSignEnum;
 
 public class TopPanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
-    JTextField firstNumber, secondNumber;
-    JComboBox<MathSignEnum> mathSign;
+    private final JTextField firstNumber, secondNumber;
+    private final JComboBox<MathSignEnum> mathSign;
 
-    private final String zeroValue = "0";
-    private final String emptyString = "";
-    private final String stringValueSubstraction = "-";
-    private final String stringValueDot = ".";
 
     public TopPanel() {
 
@@ -53,10 +50,10 @@ public class TopPanel extends JPanel {
         setLayout(new GridBagLayout());
 
         firstNumber = new JTextField();
-        firstNumber.setText(zeroValue);
+        firstNumber.setText(Calculators.ZERO_VALUE);
 
         secondNumber = new JTextField();
-        secondNumber.setText(zeroValue);
+        secondNumber.setText(Calculators.ZERO_VALUE);
 
         mathSign = new JComboBox<MathSignEnum>();
         mathSign.addItem(MathSignEnum.SUBTRACT);
@@ -74,7 +71,7 @@ public class TopPanel extends JPanel {
     }
 
     private boolean isCorect(String text) {
-        if (text.equals(stringValueDot) || text.equals(stringValueSubstraction) || text.equals(emptyString)) {
+        if (text.equals(Calculators.STRING_VALUE_DOT) || text.equals(Calculators.STRING_VALUE_SUBSTRACTION) || text.equals(Calculators.EMPTY_STRING)) {
             return true;
         }
         try {

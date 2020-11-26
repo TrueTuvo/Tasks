@@ -8,11 +8,11 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
+import calculator.Calculators;
+
 public class BottomComposite extends Composite {
 
-    public static final String ZERO_VALUE = "0";
-
-    private Text result;
+    private final Text result;
 
     public BottomComposite(Composite parent, int style) {
         super(parent, style);
@@ -27,7 +27,7 @@ public class BottomComposite extends Composite {
 
         result = new Text(composite, SWT.BORDER | SWT.READ_ONLY);
         result.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
-        result.setText(ZERO_VALUE);
+        result.setText(Calculators.ZERO_VALUE);
     }
 
     public Text getResult() {

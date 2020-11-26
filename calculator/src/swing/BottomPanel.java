@@ -7,9 +7,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import calculator.Calculators;
+
 public class BottomPanel extends JPanel {
 
-    public static final String ZERO_VALUE = "0";
 
     private static final long serialVersionUID = 1L;
 
@@ -26,7 +27,7 @@ public class BottomPanel extends JPanel {
         simpleLabel.setText("Result : ");
         result = new JTextArea();
         result.setEnabled(false);
-        result.setText(ZERO_VALUE);
+        result.setText(Calculators.ZERO_VALUE);
 
         add(simpleLabel);
         add(result, gbc);

@@ -3,11 +3,21 @@ package calculator;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public final class Calculators {
-    private static final String ZERO_VALUE = "0";
-    private static final String DOUBLE_ZERO_VALUE = "0.0";
-    private static final String EMPTY_STRING = "";
-    private static final String OPERATION_DIVISION = "/";
+public class Calculators {
+    public static final String EMPTY_STRING = "";
+    public static final String STRING_VALUE_DOT = ".";
+    public static final String STRING_VALUE_SUBSTRACTION = "-";
+    public static final char CHAR_VALUE_SUBSTRACTION = '-';
+    public static final String OPERATION_DIVISION = "/";
+    
+    public static final String ZERO_VALUE = "0";
+    public static final String DOUBLE_ZERO_VALUE = "0.0";
+    
+    public static final String NAME_CHECKED_BUTTON = "Calculate on the fly";
+    public static final String NAME_PRESSED_BUTTON = "Calculate";
+    public static final String MATH_EXCEPTION_MESSAGE = "Arithmetic Error";
+
+
 
 
     /**

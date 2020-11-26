@@ -7,14 +7,13 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JPanel;
 
+import calculator.Calculators;
+
 public class MiddlePanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
-    JButton calculateButton;
-    JCheckBox isCOTF;
-
-    private final String nameCheckedButton = "Calculate on the fly";
-    private final String namePressedButton = "Calculate";
+    private final JButton calculateButton;
+    private final JCheckBox isCOTF;
 
     public MiddlePanel() {
         GridBagConstraints gbc = new GridBagConstraints();
@@ -23,9 +22,9 @@ public class MiddlePanel extends JPanel {
         setLayout(new GridBagLayout());
 
         calculateButton = new JButton();
-        calculateButton.setText(namePressedButton);
+        calculateButton.setText(Calculators.NAME_PRESSED_BUTTON);
         isCOTF = new JCheckBox();
-        isCOTF.setText(nameCheckedButton);
+        isCOTF.setText(Calculators.NAME_CHECKED_BUTTON);
 
         add(isCOTF, gbc);
         add(calculateButton, gbc);
