@@ -33,7 +33,5 @@ public class CalculatorSWT {
                 display.sleep();
             }
         }
-
     }
-
 }
