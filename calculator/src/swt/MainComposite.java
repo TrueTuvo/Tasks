@@ -167,5 +167,4 @@ public class MainComposite extends Composite {
             result.setText(Calculators.MATH_EXCEPTION_MESSAGE);
         }
     }
-
 }

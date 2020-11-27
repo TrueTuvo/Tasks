@@ -71,7 +71,6 @@ public class MainPanel extends JTabbedPane {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 calculateButton.setEnabled(!isCOTF.isSelected());
-
             }
         };
 
@@ -79,7 +78,6 @@ public class MainPanel extends JTabbedPane {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 execute(model);
-
             }
         };
         ActionListener mathSignListener = new ActionListener() {
@@ -88,7 +86,6 @@ public class MainPanel extends JTabbedPane {
                 if (isCOTF.isSelected() || calculateButton.isSelected()) {
                     execute(model);
                 }
-
             }
         };
 
@@ -98,7 +95,6 @@ public class MainPanel extends JTabbedPane {
                 if (isCOTF.isSelected() || calculateButton.isSelected()) {
                     execute(model);
                 }
-
             }
 
             @Override
@@ -115,14 +111,11 @@ public class MainPanel extends JTabbedPane {
             @Override
             public void removeUpdate(DocumentEvent arg0) {
                 doAction();
-
             }
         };
 
         calculateButton.addActionListener(calculateButtonListener);
-
         isCOTF.addActionListener(isCOTFListener);
-
         mathSign.addActionListener(mathSignListener);
         firstNumber.getDocument().addDocumentListener(inputModifyListener);
         secondNumber.getDocument().addDocumentListener(inputModifyListener);
@@ -133,7 +126,6 @@ public class MainPanel extends JTabbedPane {
      * if the input field is empty, it will be initialized to zero. Then the mathematical operation is validated. If the
      * result is received, then: result will be displayed in the result field; mathematical expression will be added to
      * the calculation history.
-     * 
      * 
      * @param resultsLog this variable will be added mathematical expression
      */
@@ -157,5 +149,4 @@ public class MainPanel extends JTabbedPane {
             result.setText(Calculators.MATH_EXCEPTION_MESSAGE);
         }
     }
-
 }

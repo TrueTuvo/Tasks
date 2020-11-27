@@ -11,7 +11,6 @@ import calculator.Calculators;
 
 public class BottomPanel extends JPanel {
 
-
     private static final long serialVersionUID = 1L;
 
     private final JLabel simpleLabel;
@@ -31,7 +30,6 @@ public class BottomPanel extends JPanel {
 
         add(simpleLabel);
         add(result, gbc);
-
     }
 
     public JTextArea getResult() {

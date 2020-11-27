@@ -28,7 +28,6 @@ public class MiddlePanel extends JPanel {
 
         add(isCOTF, gbc);
         add(calculateButton, gbc);
-
     }
 
     public JCheckBox getIsCOTF() {
