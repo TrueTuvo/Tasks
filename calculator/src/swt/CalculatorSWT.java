@@ -21,7 +21,7 @@ public class CalculatorSWT {
         Rectangle screenSize = display.getPrimaryMonitor().getBounds();
         shell.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, true));
         shell.setLayout(new GridLayout(1, false));
-
+        System.out.println();
         new MainComposite(shell, SWT.NONE);
         shell.pack();
         shell.setLocation((screenSize.width - shell.getBounds().width) / 2,
