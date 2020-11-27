@@ -24,8 +24,8 @@ public class Main {
         chouseCalculatorWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
-        chouseCalculatorWindow.setBounds(dimension.width / 2 - dimension.width / 8, dimension.height / 2 - dimension.width / 8,
-                dimension.width / 4, dimension.width / 10);
+        chouseCalculatorWindow.setBounds(dimension.width / 2 - dimension.width / 8,
+                dimension.height / 2 - dimension.width / 8, dimension.width / 4, dimension.width / 10);
         chouseCalculatorWindow.setTitle("calculator");
         chouseCalculatorWindow.setLayout(new FlowLayout(FlowLayout.CENTER));
 
@@ -46,8 +46,6 @@ public class Main {
         JLabel questionLabel = new JLabel();
         questionLabel.setText("What type of calculator should you run?");
 
-
-
         ActionListener ButtonListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
@@ -55,18 +53,16 @@ public class Main {
                 if (jButton.getText().equals("SWING")) {
                     CalculatorSwing calculatorSwing = new CalculatorSwing();
                     chouseCalculatorWindow.dispose();
-                    calculatorSwing.init();  
-                }
-                else {
+                    calculatorSwing.init();
+                } else {
                     CalculatorSWT calculatorSWT = new CalculatorSWT();
                     chouseCalculatorWindow.dispose();
                     calculatorSWT.init();
                 }
-                
+
             }
         };
-        
-        
+
         swingButton.addActionListener(ButtonListener);
         swtButton.addActionListener(ButtonListener);
 
